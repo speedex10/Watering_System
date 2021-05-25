@@ -69,21 +69,19 @@ public class class1 {
             return;
         }
         Thread.sleep(4000);
-        int rtc_arr[] = {100, 1, 2, 3, 4};
-            for (int i = 0; i < arr2C.size(); i++) {
-                sp.getOutputStream().write(arr2C.get(i));
-                sp.getOutputStream().flush();
+        for (Integer integer : arr2C) {
+            sp.getOutputStream().write(integer);
+            sp.getOutputStream().flush();
 
 
-            }
-	        System.out.println("Sent number: ");
+        }
+        System.out.println("Sent number: ");
 
 
         if (sp.closePort()) {
             System.out.println("Port is closed :)");
         } else {
             System.out.println("Failed to close port :(");
-            return;
         }
     }
 
@@ -98,8 +96,6 @@ public class class1 {
 
         return arr2C;
     }
-
-
 
 
 }
